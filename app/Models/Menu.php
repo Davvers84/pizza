@@ -11,7 +11,7 @@ class Menu extends Model
     protected $guarded = [];
 
     public function getAll() {
-        return Menu::all();
+        return Menu::with('pizzas.pizza')->get();
     }
 
     public function getById($id) {
@@ -19,7 +19,7 @@ class Menu extends Model
     }
 
     public function pizzas() {
-        return $this->hasMany('App\Models\MenuPizzas');
+        return $this->hasMany('App\Models\MenuPizzas', 'menu_id');
     }
 
 }

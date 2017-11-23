@@ -16,4 +16,4 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::resource('/packagistpizzabox', Modules\PackagistPizzaBox\Http\Controllers\PackagistPizzaBoxController::class);
+Route::resource('/packagistpizzabox', app\Http\Controllers\PackagistPizzaBoxController::class);

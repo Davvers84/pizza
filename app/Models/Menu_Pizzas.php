@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+//use App\Models\Menu;
 
 class MenuPizzas extends Model
 {
@@ -10,7 +11,7 @@ class MenuPizzas extends Model
     protected $guarded = [];
 
     public function getAll() {
-        return MenuPizzas::all();
+        return MenuPizzas::with('menu', 'pizza')->get();
     }
 
     public function getById($id) {
@@ -18,6 +19,10 @@ class MenuPizzas extends Model
     }
 
     public function menu() {
-        return $this->belongsTo('App\Models\Menu');
+        return $this->belongsTo('App\Models\Menu', 'id');
+    }
+
+    public function pizza() {
+        return $this->hasOne('App\Models\Pizza', 'id');
     }
 }

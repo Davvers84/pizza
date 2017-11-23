@@ -11,10 +11,14 @@ class Pizza extends Model
     public $table = 'pizza';
 
     public function getAll() {
-        return Pizza::all();
+        return Pizza::with('menuPizzas', 'menu')->get();
     }
 
     public function getById($id) {
         return Pizza::find($id);
+    }
+
+    public function menuPizzas() {
+        return $this->belongsTo('App\Models\MenuPizzas', 'pizza_id');
     }
 }
