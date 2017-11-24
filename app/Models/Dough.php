@@ -17,4 +17,8 @@ class Dough extends Model
     public function getById($id) {
         return Dough::find($id);
     }
+
+    public function pizza() {
+        return $this->belongsTo('App\Models\Pizza', 'id');
+    }
 }

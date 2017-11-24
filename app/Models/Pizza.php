@@ -21,4 +21,8 @@ class Pizza extends Model
     public function menuPizzas() {
         return $this->belongsTo('App\Models\MenuPizzas', 'pizza_id');
     }
+
+    public function dough() {
+        return $this->hasOne('App\Models\Dough', 'id');
+    }
 }
