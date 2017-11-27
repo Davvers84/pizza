@@ -12,7 +12,7 @@ class PizzaSeeder extends Seeder
     public function run()
     {
         $doughName = 'Thin & Crispy';
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 10)->first();
         $price = 5.99;
@@ -37,7 +37,7 @@ class PizzaSeeder extends Seeder
             , 'dough_id' => $dough->id
         ]);
 
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 12)->first();
         $price = 7.99;
@@ -62,7 +62,7 @@ class PizzaSeeder extends Seeder
             , 'dough_id' => $dough->id
         ]);
 
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 16)->first();
         $price = 9.99;
@@ -88,7 +88,7 @@ class PizzaSeeder extends Seeder
         ]);
 
         $doughName = 'Stonebaked';
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 10)->first();
         $price = 6.99;
@@ -113,7 +113,7 @@ class PizzaSeeder extends Seeder
             , 'dough_id' => $dough->id
         ]);
 
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 12)->first();
         $price = 8.99;
@@ -138,7 +138,7 @@ class PizzaSeeder extends Seeder
             , 'dough_id' => $dough->id
         ]);
 
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 16)->first();
         $price = 10.99;
@@ -164,7 +164,7 @@ class PizzaSeeder extends Seeder
         ]);
 
         $doughName = 'Dominator';
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 10)->first();
         $price = 7.99;
@@ -189,7 +189,7 @@ class PizzaSeeder extends Seeder
             , 'dough_id' => $dough->id
         ]);
 
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 12)->first();
         $price = 9.99;
@@ -214,7 +214,7 @@ class PizzaSeeder extends Seeder
             , 'dough_id' => $dough->id
         ]);
 
-        $dough = DB::table('dough')
+        $dough = DB::table('doughs')
             ->where('dough_name', $doughName)
             ->where('dough_base_size_inches', 16)->first();
         $price = 11.99;
