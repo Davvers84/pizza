@@ -13,11 +13,11 @@ class CreatePizzasTable extends Migration
      */
     public function up()
     {
-        Schema::create('pizza', function(Blueprint $table)
+        Schema::create('pizzas', function(Blueprint $table)
         {
             $table->increments('id');
             $table->integer('dough_id')->unsigned();
-            $table->foreign('dough_id')->references('id')->on('dough');
+            $table->foreign('dough_id')->references('id')->on('doughs');
             $table->string('pizza_name', 32);
             $table->decimal('pizza_base_price', 10,2)->default(0.00);
         });
@@ -30,6 +30,6 @@ class CreatePizzasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('pizza');
+        Schema::drop('pizzas');
     }
 }

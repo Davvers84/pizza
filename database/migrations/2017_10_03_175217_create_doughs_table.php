@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackagistPizzaBoxTable extends Migration
+class CreateDoughsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreatePackagistPizzaBoxTable extends Migration
      */
     public function up()
     {
-        Schema::create('packagistpizzaboxes', function (Blueprint $table) {
+        Schema::create('doughs', function(Blueprint $table)
+        {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('dough_name', 20);
+            $table->integer('dough_base_size_inches')->default(10);
+            $table->decimal('dough_extra_price',10, 2)->default(0.00);
+            $table->boolean('dough_stuffed_crust')->default(false);
         });
     }
 
@@ -26,6 +30,6 @@ class CreatePackagistPizzaBoxTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('packagistpizzaboxes');
+        Schema::drop('doughs');
     }
 }

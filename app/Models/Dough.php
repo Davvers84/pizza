@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Dough extends Model
 {
     public $timestamps = false;
-    public $table = 'dough';
     protected $guarded = [];
 
     public function getAll() {

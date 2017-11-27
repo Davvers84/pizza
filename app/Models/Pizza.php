@@ -8,7 +8,6 @@ class Pizza extends Model
 {
     public $timestamps = false;
     protected $guarded = [];
-    public $table = 'pizza';
 
     public function getAll() {
         return Pizza::with('menuPizzas', 'menu')->get();

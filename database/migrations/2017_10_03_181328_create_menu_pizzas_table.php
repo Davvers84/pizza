@@ -19,7 +19,7 @@ class CreateMenuPizzasTable extends Migration
             $table->integer('menu_id')->unsigned();
             $table->foreign('menu_id')->references('id')->on('menus');
             $table->integer('pizza_id')->unsigned();
-            $table->foreign('pizza_id')->references('id')->on('pizza');
+            $table->foreign('pizza_id')->references('id')->on('pizzas');
         });
 
     }

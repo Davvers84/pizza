@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Menu extends Model
 {
     public $timestamps = false;
-    public $table = 'menus';
     protected $guarded = [];
 
     public function getAll() {

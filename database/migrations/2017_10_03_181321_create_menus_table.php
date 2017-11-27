@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackagistPizzaBoxTable extends Migration
+class CreateMenusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreatePackagistPizzaBoxTable extends Migration
      */
     public function up()
     {
-        Schema::create('packagistpizzaboxes', function (Blueprint $table) {
+        Schema::create('menus', function(Blueprint $table)
+        {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('menu_name', 20);
         });
     }
 
@@ -26,6 +27,6 @@ class CreatePackagistPizzaBoxTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('packagistpizzaboxes');
+        Schema::drop('menus');
     }
 }
