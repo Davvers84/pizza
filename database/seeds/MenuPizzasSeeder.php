@@ -12,22 +12,22 @@ class MenuPizzasSeeder extends Seeder
     public function run()
     {
         $menu = DB::table('menus')->where('menu_name', 'Mains')->first();
-        $pizza = DB::table('pizza')->where('pizza_name', 'Ham & Cheese')->first();
+        $pizza = DB::table('pizzas')->where('pizza_name', 'Ham & Cheese')->first();
         factory('App\Models\MenuPizzas')->create([
            'menu_id' => $menu->id
            , 'pizza_id' => $pizza->id
         ]);
-        $pizza = DB::table('pizza')->where('pizza_name', 'Bacon & Maple Syrup')->first();
+        $pizza = DB::table('pizzas')->where('pizza_name', 'Bacon & Maple Syrup')->first();
         factory('App\Models\MenuPizzas')->create([
             'menu_id' => $menu->id
             , 'pizza_id' => $pizza->id
         ]);
-        $pizza = DB::table('pizza')->where('pizza_name', 'Baked Beans & Sausage')->first();
+        $pizza = DB::table('pizzas')->where('pizza_name', 'Baked Beans & Sausage')->first();
         factory('App\Models\MenuPizzas')->create([
             'menu_id' => $menu->id
             , 'pizza_id' => $pizza->id
         ]);
-        $pizza = DB::table('pizza')->where('pizza_name', 'Veggies')->first();
+        $pizza = DB::table('pizzas')->where('pizza_name', 'Veggies')->first();
         factory('App\Models\MenuPizzas')->create([
             'menu_id' => $menu->id
             , 'pizza_id' => $pizza->id

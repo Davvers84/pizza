@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
         Eloquent::unguard();
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
-        DB::table('dough')->truncate();
-        DB::table('pizza')->truncate();
+        DB::table('doughs')->truncate();
+        DB::table('pizzas')->truncate();
         DB::table('menus')->truncate();
         DB::table('menu_pizzas')->truncate();
 
