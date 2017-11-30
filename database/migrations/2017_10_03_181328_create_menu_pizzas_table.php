@@ -17,7 +17,7 @@ class CreateMenuPizzasTable extends Migration
         {
             $table->increments('id');
             $table->integer('menu_id')->unsigned();
-            $table->foreign('menu_id')->references('id')->on('menus');
+            $table->foreign('menu_id')->references('id')->on('menus') ->onDelete('cascade');
             $table->integer('pizza_id')->unsigned();
             $table->foreign('pizza_id')->references('id')->on('pizzas');
         });
