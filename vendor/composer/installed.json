@@ -3476,20 +3476,20 @@
     },
     {
         "name": "skeleton/generator",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "1.0.10",
+        "version_normalized": "1.0.10.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Davvers84/generator.git",
-            "reference": "4490849377802940fa1f31442513d17f4be56dfe"
+            "reference": "0c60019466834558e7ae8ff50a06e58cf227becb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Davvers84/generator/zipball/4490849377802940fa1f31442513d17f4be56dfe",
-            "reference": "4490849377802940fa1f31442513d17f4be56dfe",
+            "url": "https://api.github.com/repos/Davvers84/generator/zipball/0c60019466834558e7ae8ff50a06e58cf227becb",
+            "reference": "0c60019466834558e7ae8ff50a06e58cf227becb",
             "shasum": ""
         },
-        "time": "2017-11-27 15:39:41",
+        "time": "2017-11-27 19:48:37",
         "type": "library",
         "installation-source": "source",
         "autoload": {
