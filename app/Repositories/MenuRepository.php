@@ -31,6 +31,11 @@ class MenuRepository implements MenuPizzasRepositoryContract
         return $this->menu->getById($id);
     }
 
+    public function store(Request $request)
+    {
+        return $this->menu->create($request->all());
+    }
+
     public function update($id, Request $request)
     {
         $this->menu = $this->getById($id);
