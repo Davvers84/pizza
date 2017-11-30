@@ -9,7 +9,7 @@
 namespace App\Repositories;
 
 use App\Repositories\Contracts\MenuPizzasRepositoryContract;
-use App\Repositories\Contracts\Request;
+use Illuminate\Http\Request;
 use App\Models\Menu;
 
 class MenuRepository implements MenuPizzasRepositoryContract
@@ -33,7 +33,8 @@ class MenuRepository implements MenuPizzasRepositoryContract
 
     public function update($id, Request $request)
     {
-        return $this->menu->update($id, $request);
+        $this->menu = $this->getById($id);
+        $this->menu->update($request->all());
     }
 
     public function destroy($ids)
