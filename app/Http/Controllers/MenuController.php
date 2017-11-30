@@ -43,9 +43,7 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        $this->menuRepo->firstOrCreate($request->all());
-        $this->menuRepo->save();
-        return $this->menuRepo;
+        return $this->menuRepo->store($request);
     }
 
     /**
@@ -90,7 +88,7 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        $this->menuRepo->destroy($ids);
+        $this->menuRepo->destroy($id);
         return "Menu Deleted.";
     }
 }
